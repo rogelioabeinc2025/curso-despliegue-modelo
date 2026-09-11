@@ -21,7 +21,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia todos los archivos
-COPY ..
+COPY . .
 
 # Documentacion del puerto que utilizara
 EXPOSE 8080
