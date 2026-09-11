@@ -10,8 +10,9 @@ FROM python:3.12-slim
 WORKDIR /servicio
 
 # quitar LOGS
-ENV PYTHONDONTWRITEBYTECODE=1
-    PYTHONUNBUFFERED=1
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+    
 
 # copia de archivo
 # copiar solo el requirements
