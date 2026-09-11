@@ -8,10 +8,15 @@ from fastapi import FastAPI, HTTPException
 # Estructura de datos que recibimos y que regresamos desde el API
 from pydantic import BaseModel, Field
 
-from Proyecto_2.inferencia import pronosticar
-from Proyecto_2.esquema import SolicitudPronostico
+#from Proyecto_2.inferencia import pronosticar
+#from Proyecto_2.esquema import SolicitudPronostico
 
-NOMBRE_BUNDLE = "Proyecto_2/modelo_demanda.joblib"
+from inferencia import pronosticar
+from esquema import SolicitudPronostico
+
+
+#NOMBRE_BUNDLE = "Proyecto_2/modelo_demanda.joblib"
+NOMBRE_BUNDLE = "modelo_demanda.joblib"
 estado_servicio = {"bundle": None}
 
 # decorador. Forma de dar un ciclo de vida a la funcion que definimos para nuestro proyecto
